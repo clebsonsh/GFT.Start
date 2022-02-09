@@ -1,5 +1,5 @@
 using System;
-namespace RendaDoFuncionario.src.Classes
+namespace RendaDoFuncionario
 {
     public class Funcionario
     {
@@ -63,6 +63,23 @@ namespace RendaDoFuncionario.src.Classes
             double ganhoLiquidoAnual = ganhoLiquidoMensal * 12;
 
             return ganhoLiquidoAnual;
+        }
+
+        public override string ToString()
+        {
+            return $@"
+            ###########################
+            Nome: {this.Nome}
+            Matricula: {this.Matricula}
+            Salario: {this.Salario}
+            Data Admissao: {this.DataAdmissao}
+            CPF: {this.CPF}
+
+            Ganho Bruto Anual: {this.calcularGanhoBrutoAnual()}
+            Ganho Líquido Mensal: {this.calcularGanhoLiquidoMensal()}
+            Ganho Líquido Anual: {this.calcularGanhoLiquidoAnual()}
+            ###########################
+            ";
         }
     }
 }
