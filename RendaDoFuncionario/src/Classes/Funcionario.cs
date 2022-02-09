@@ -71,13 +71,13 @@ namespace RendaDoFuncionario
             ###########################
             Nome: {this.Nome}
             Matricula: {this.Matricula}
-            Salario: {this.Salario}
+            Salario: {string.Format("{0:c}", this.Salario)}
             Data Admissao: {this.DataAdmissao}
             CPF: {this.CPF}
 
-            Ganho Bruto Anual: {this.calcularGanhoBrutoAnual()}
-            Ganho Líquido Mensal: {this.calcularGanhoLiquidoMensal()}
-            Ganho Líquido Anual: {this.calcularGanhoLiquidoAnual()}
+            Ganho Bruto Anual: {string.Format("{0:c}",this.calcularGanhoBrutoAnual())}
+            Ganho Líquido Mensal: {string.Format("{0:c}",this.calcularGanhoLiquidoMensal())}
+            Ganho Líquido Anual: {string.Format("{0:c}",this.calcularGanhoLiquidoAnual())}
             ###########################
             ";
         }
